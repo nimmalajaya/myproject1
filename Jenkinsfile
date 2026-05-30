@@ -2,10 +2,12 @@ pipeline {
     agent any
 
     stages {
+
         stage('Build') {
             steps {
-                sh 'docker build -t flask-app .'
+                bat 'docker build -t flask-app -f dockerfile .'
             }
         }
+
     }
 }
